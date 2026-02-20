@@ -3,10 +3,10 @@ import Titulo from "./Titulo"
 function App() {
   return(
     <div>
-      <Titulo />
-      <Titulo />
-      <Titulo />
-      <Titulo />
+      <Titulo cor='red'/>
+      <Titulo cor='blue'/>
+      <Titulo cor='yellow'/>
+      <Titulo cor='green'/>
     </div>
   )
 }

@@ -1,12 +1,19 @@
-function Titulo() {
+import { use, useState } from "react";
 
-    let nome = 'Aquiles Alves'
+function Titulo({cor}) {
+  const [texto, setTexto] = useState('Titulo Inicial')
+  const [input, setInput] = useState('')
+
+  function clicou() {
+    setTexto(input)
+  }
 
   return (
     <div>
-      <h1>Oi eu sou Fulano</h1>
-      
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam esse possimus inventore accusamus natus illo ex nemo nobis ipsa. Dolorem at ipsa voluptatibus maxime eveniet natus maiores necessitatibus tempore eaque?</p>
+      <h1 style={{ color:cor }}> {texto} </h1>
+      <input value={input} onChange={(e) => {setInput(e.target.value)} } type="text" />
+      <button onClick={clicou} >mudar</button>
+
     </div>
   );
 }
